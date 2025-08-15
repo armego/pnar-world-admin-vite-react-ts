@@ -1,0 +1,117 @@
+@use 'bulma';
+// Translation form responsive row
+.translation-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 769px) {
+  .translation-form-row {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .mt-0-tablet {
+    margin-top: 0 !important;
+  }
+}
+// Modern basic theme coloring for Bulma
+$primary: #3b82f6;
+$info: #2563eb;
+$success: #22c55e;
+$warning: #facc15;
+$danger: #ef4444;
+$grey-light: #f4f6fb;
+$grey-dark: #22223b;
+$navbar-background-color: #2563eb;
+$navbar-item-color: #fff;
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+$body-background-color: $grey-light;
+$box-background-color: #fff;
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+$bottom-nav-bg: #1e293b;
+$bottom-nav-active: #3b82f6;
+$bottom-nav-text: #fff;
+$typo-main: #1e293b;
+$typo-muted: #64748b;
+
+body {
+  background: $body-background-color;
+  color: $typo-main;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+  background: $navbar-background-color !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.04);
+}
+
+.navbar-item {
+  color: $navbar-item-color !important;
+  &.has-text-primary {
+    color: $primary !important;
+  }
+}
+
+.navbar-item.is-active,
+.navbar-item:focus,
+.navbar-item:hover {
+  background-color: rgba(59, 130, 246, 0.08);
+  color: $primary !important;
+}
+
+.button.is-primary {
+  background: $primary;
+  border-color: $primary;
+  color: #fff;
+}
+
+.box {
+  background: $box-background-color;
+  box-shadow: $box-shadow;
+  border-radius: 8px;
+}
+
+.section {
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+// Bottom nav custom theme
+.navbar.is-fixed-bottom {
+  box-shadow: 0 -2px 8px rgba(30, 41, 59, 0.08);
+  border-top: 1 px solid red;
+}
+.navbar.is-fixed-bottom .navbar-item {
+  color: #888888 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar.is-fixed-bottom .navbar-item.has-text-primary,
+.navbar.is-fixed-bottom .navbar-item.is-active,
+.navbar.is-fixed-bottom .navbar-item:focus,
+.navbar.is-fixed-bottom .navbar-item:hover {
+  color: $bottom-nav-active !important;
+  background: transparent;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $typo-main;
+  font-weight: 700;
+}
+p,
+span,
+label,
+.label {
+  color: $typo-main;
+}
+.has-text-muted {
+  color: $typo-muted !important;
+}
